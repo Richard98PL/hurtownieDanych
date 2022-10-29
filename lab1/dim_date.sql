@@ -26,7 +26,7 @@ month_name_english,
 month_name_polish,
 calendar_quarter,
 year_number
-) select ORDERDATE as date_value, 
+) select distinct ORDERDATE as date_value, 
         TO_CHAR(ORDERDATE, 'DDD') as day_number_of_year, 
         TO_CHAR(ORDERDATE, 'DD') as day_number_of_month, 
         TO_CHAR(ORDERDATE, 'D') as day_number_of_week,
