@@ -12,7 +12,7 @@ year_number
 ) select distinct ORDERDATE as date_value, 
         TO_CHAR(ORDERDATE, 'DDD') as day_number_of_year, 
         TO_CHAR(ORDERDATE, 'DD') as day_number_of_month, 
-        CASE TRIM(TO_CHAR(ORDERDATE, 'Day'))
+        CASE TRIM(TO_CHAR(ORDERDATE, 'Day','NLS_DATE_LANGUAGE = ENGLISH'))
         WHEN 'Monday' THEN 1
         WHEN 'Tuesday' THEN 2
         WHEN 'Wendesday' THEN 3
